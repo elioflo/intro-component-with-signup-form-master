@@ -35,7 +35,6 @@ export class FrontendmentorFooter extends LitElement {
     super()
     this.name = 'Your name here'
     this.url = '#'
-    console.log(this.styles)
   }
 
   render() {

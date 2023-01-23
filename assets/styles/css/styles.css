@@ -329,8 +329,19 @@ body {
   background-color: var(--primary-red);
 }
 
+:root {
+  --primary-red: hsl(0, 100%, 74%);
+  --primary-green: hsl(154, 59%, 51%);
+  --accent-blue: hsl(248, 32%, 49%);
+  --neutral-dark-blue: hsl(249, 10%, 26%);
+  --neutral-dark-blue-rgb: 62, 60, 73;
+  --neutral-grayish-blue: hsl(246, 25%, 77%);
+  --neutral-grayish-blue-rgb: 185, 182, 211;
+}
+
 .main {
   width: calc(100% - 3em);
+  max-width: 500px;
   margin: auto;
   padding-top: 4.9em;
   padding-bottom: 3.5em;
@@ -351,7 +362,6 @@ body {
   border-radius: 0.5em;
   line-height: 1.5;
   padding: 1.3em 3em;
-  max-width: 375px;
   margin: 4.5em auto;
   margin-bottom: 0;
   box-shadow: 0px 0.5em 0px 0px rgba(0, 0, 0, 0.2);
@@ -372,19 +382,51 @@ body {
   border-radius: 0.3em;
   padding: 1.2em 0;
   padding-left: 1em;
-  margin-bottom: 1em;
+  margin-top: 1em;
+  font-weight: 500;
+}
+.form__input:first-of-type {
+  margin-top: 0;
 }
 .form__input::placeholder {
   color: rgba(var(--neutral-dark-blue-rgb), 0.7);
   font-weight: 600;
 }
-.form__input--btn {
+.form__input--invalidate {
+  border-color: var(--primary-red);
+  color: var(--primary-red);
+  background: url("../../images/icon-error.svg") no-repeat center right 1.5em;
+}
+.form__error-message {
+  display: none;
+  color: var(--primary-red);
+  text-align: right;
+  width: calc(100% - 3rem);
+  margin: auto;
+  margin-top: 0.5rem;
+  font-size: 0.7em;
+  font-style: italic;
+}
+.form__error-message--visible {
+  display: inline-block;
+}
+.form__button {
+  box-sizing: border-box;
+  width: calc(100% - 3em);
+  border-radius: 0.3em;
+  padding: 1.2em 0;
+  margin-top: 1em;
+  margin-bottom: 1em;
   background-color: var(--primary-green);
   border: none;
   color: white;
   text-transform: uppercase;
   font-weight: 500;
   box-shadow: inset 0px -0.2em 0px 0px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+.form__button:hover {
+  opacity: 0.7;
 }
 .form__text {
   width: calc(100% - 6rem);

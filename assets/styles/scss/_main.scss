@@ -1,5 +1,8 @@
+@import 'variables';
+
 .main {
   width: calc(100% - 3em);
+  max-width: 500px;
   margin: auto;
   padding-top: 4.9em;
   padding-bottom: 3.5em;
@@ -22,7 +25,6 @@
     border-radius: 0.5em;
     line-height: 1.5;
     padding: 1.3em 3em;
-    max-width: 375px;
     margin: 4.5em auto;
     margin-bottom: 0;
     box-shadow: 0px .5em 0px 0px rgba(0,0,0,0.2);
