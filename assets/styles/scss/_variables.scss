@@ -5,5 +5,16 @@
   --accent-blue: hsl(248, 32%, 49%);
 
   --neutral-dark-blue: hsl(249, 10%, 26%);
+  --neutral-dark-blue-rgb: 62, 60, 73;
+
   --neutral-grayish-blue: hsl(246, 25%, 77%);
+  --neutral-grayish-blue-rgb: 185, 182, 211;
 }
+
+
+$min-tablet: 426px;
+$min-laptop: 769px;
+$min-desktop: 1025px;
+$tablet: "(min-width: #{$min-tablet})";
+$laptop: "(min-width: #{$min-laptop})";
+$desktop: "(min-width: #{$min-desktop})";
