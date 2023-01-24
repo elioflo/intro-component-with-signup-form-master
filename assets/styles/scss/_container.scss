@@ -1,5 +1,12 @@
+@import 'variables';
+@import 'mixins';
+
 .container {
     min-height: 100vh;
     background-image: url('../../images/bg-intro-mobile.png');
     background-color: var(--primary-red);
+    
+    @include media-query($laptop){
+        background-image: url('../../images/bg-intro-desktop.png');
+    }
 }
