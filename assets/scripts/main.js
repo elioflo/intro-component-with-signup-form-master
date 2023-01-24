@@ -1,7 +1,3 @@
-import { FrontendmentorFooter } from './components/frontendmentor.js'
-
-window.customElements.define('frontendmentor-footer', FrontendmentorFooter)
-
 function validateForm(e) {
   e.preventDefault()
   const inputs = Array.from(e.target.querySelectorAll('.form__input'))
@@ -33,4 +29,8 @@ function validateForm(e) {
   })
 }
 
-document.getElementById('form').addEventListener('submit', validateForm)
+
+const form = document.querySelector('#form')
+form.noValidate = true
+form.addEventListener('submit', validateForm)
+

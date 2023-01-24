@@ -10,61 +10,40 @@
 
   <title>Frontend Mentor | Intro component with sign up form</title>
 
-  <script type="importmap">
-    {
-      "imports": {
-        "lit": "https://ga.jspm.io/npm:lit@2.6.1/index.js"
-      },
-      "scopes": {
-        "https://ga.jspm.io/": {
-          "@lit/reactive-element": "https://ga.jspm.io/npm:@lit/reactive-element@1.6.1/reactive-element.js",
-          "lit-element/lit-element.js": "https://ga.jspm.io/npm:lit-element@3.2.2/lit-element.js",
-          "lit-html": "https://ga.jspm.io/npm:lit-html@2.6.1/lit-html.js",
-          "lit-html/is-server.js": "https://ga.jspm.io/npm:lit-html@2.6.1/is-server.js"
-        }
-      }
-    }
-  </script>
-
   <link rel="stylesheet" href="./assets/styles/css/styles.css">
   <script src="./assets/scripts/main.js" type="module"></script>
-
+  
 </head>
 
-<body>
-  <div class="container">
-    <main class="main">
-      <div class="main__info">
-        <h1 class="main__title">
-          Learn to code by watching others
-        </h1>
-        <p class="main__text">
-          See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
-          but understanding how developers think is invaluable.
-        </p>
-      </div>
-      <p class="main__offer">
-        <strong>Try it free 7 days</strong> then $20/mo. thereafter
+<body class="container">
+  <main class="main">
+    <div class="main__info">
+      <h1 class="main__title">
+        Learn to code by watching others
+      </h1>
+      <p class="main__text">
+        See how experienced developers solve problems in real-time. Watching scripted tutorials is great,
+        but understanding how developers think is invaluable.
       </p>
-
-      <form class="form" id="form" novalidate>
-        <input class="form__input" type="text" placeholder="First Name" required>
-        <p class="form__error-message"></p>
-        <input class="form__input" type="text" placeholder="Last Name" required>
-        <p class="form__error-message"></p>
-        <input class="form__input" type="email" placeholder="Email Address" required>
-        <p class="form__error-message"></p>
-        <input class="form__input" type="password" placeholder="Password" required>
-        <p class="form__error-message"></p>
-        <input class="form__button" type="submit" value="Claim your free trial">
-        <p class="form__text">
-          By clicking the button, you are agreeing to our <a class="form__terms" href="#">Terms and Services</a>
-        </p>
-      </form>
-
-    </main>
-  </div>
-  <frontendmentor-footer name="Elio Flores" url="https://elioflo.github.io/elioflo/">
-  </frontendmentor-footer>
+    </div>
+    <p class="main__offer">
+      <strong>Try it free 7 days</strong> then $20/mo. thereafter
+    </p>
+    
+    <form class="form" id="form">
+      <input class="form__input" type="text" placeholder="First Name" aria-label="First Name" aria-describedby="first-name-error" required>
+      <p class="form__error-message" id="first-name-error" aria-live="assertive" ></p>
+      <input class="form__input" type="text" placeholder="Last Name" aria-label="Last Name" aria-describedby="last-name-error" required>
+      <p class="form__error-message" id="last-name-error" aria-live="assertive" ></p>
+      <input class="form__input" type="email" placeholder="Email Address" aria-label="Email Address" aria-describedby="email-error" required>
+      <p class="form__error-message" id="email-error" aria-live="assertive" ></p>
+      <input class="form__input" type="password" placeholder="Password" aria-label="Password" aria-describedby="password-error" required>
+      <p class="form__error-message" id="password-error" aria-live="assertive" ></p>
+      <button class="form__button" type="submit">Claim your free trial</button>
+      <p class="form__text">
+        By clicking the button, you are agreeing to our <a class="form__terms" href="#">Terms and Services</a>
+      </p>
+    </form>
+  </main>
 </body>
 </html>
