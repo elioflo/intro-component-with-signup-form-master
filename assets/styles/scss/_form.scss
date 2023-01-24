@@ -102,6 +102,10 @@
       padding-left: 2em;
     }
     
+    &__error-message {
+      width: calc(100% - 5rem);
+    }
+    
     &__button {
       width: calc(100% - 5em);
       margin-top: 1.3em;
